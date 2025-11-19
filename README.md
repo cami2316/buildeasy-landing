@@ -22,7 +22,7 @@ styles.css → estilo da landing
 
 A página está publicada via GitHub Pages:
 
-👉 https://SEU-USUARIO.github.io/NOME-DO-REPO/
+👉 https://cami2316.github.io/buildeasy-landing/
 
 (Será gerado automaticamente depois de ativar o GitHub Pages no Settings.)
 
