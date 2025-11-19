@@ -80,29 +80,19 @@ body {
   gap: 16px;
 }
 
-.logo-text {
+/* ========= LOGO NOVO (IMAGEM) ========= */
+
+.logo {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 12px;
-  background: var(--blue-dark);
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
+.logo-img {
+  height: 60px;   /* ajuste do tamanho */
+  width: auto;
 }
 
-.logo-name {
-  font-weight: 600;
-  font-size: 0.98rem;
-}
+/* ======================================= */
 
 .nav {
   display: flex;
