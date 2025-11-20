@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildEasy – Inteligência Artificial para 1099</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .ia-section {
+      padding: 72px 0;
+    }
+
+    .ia-example {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid rgba(13, 39, 77, 0.08);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 32px;
+    }
+
+    .ia-example h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--blue-dark);
+    }
+
+    .ia-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .ia-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .before {
+      background: #ffe6e6;
+      border: 1px solid #ffb5b5;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 0.92rem;
+    }
+
+    .after {
+      background: #e5f7ff;
+      border: 1px solid #b5e4ff;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 0.92rem;
+    }
+
+    .badge-ia {
+      display: inline-block;
+      background: var(--blue-dark);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO IA -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge-ia">Inteligência Artificial BuildEasy</span>
+        <h1>IA que te ajuda a cobrar certo, organizar suas obras e trabalhar como profissional</h1>
+        <p class="hero-sub">
+          Exatamente do jeito que um instalador 1099 precisa: simples, prática e direta ao ponto.  
+          A IA do BuildEasy transforma caos em organização.
+        </p>
+      </div>
+      <div class="hero-card">
+        <h2>O que a IA faz por você?</h2>
+        <ul>
+          <li>Transforma texto bagunçado em estimates profissionais</li>
+          <li>Revisa preço e alerta se está baixo demais</li>
+          <li>Corrige erros comuns de cálculo e metragem</li>
+          <li>Escreve escopos sérios para enviar ao cliente</li>
+          <li>Explica passo a passo como cobrar cada tipo de job</li>
+          <li>Converte recibos em payables via OCR</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXEMPLOS IA -->
+  <section class="ia-section">
+    <div class="container">
+
+      <h2>Exemplos reais do que a IA faz</h2>
+      <p class="section-sub">
+        Veja como a IA do BuildEasy organiza aquilo que normalmente vira bagunça no WhatsApp.
+      </p>
+
+      <!-- Example 1 -->
+      <div class="ia-example">
+        <h3>1. Transformando mensagem bagunçada em Estimate profissional</h3>
+        <div class="ia-columns">
+          <div class="before">
+            <strong>ANTES (mensagem no WhatsApp):</strong><br><br>
+            “tile 250 pé, 600 dólar, material vc compra. começo quarta se der.”
+          </div>
+          <div class="after">
+            <strong>DEPOIS (IA BuildEasy):</strong><br><br>
+            <ul>
+              <li>Demolição e instalação de tile – 250 sq ft</li>
+              <li>Nivelamento incluso</li>
+              <li>Materiais fornecidos pelo cliente</li>
+              <li>Preço recomendado: <strong>$1,150 – $1,350</strong></li>
+              <li>Margem sugerida: <strong>18%</strong></li>
+              <li>Condições: 50% entrada • 50% na entrega</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="ia-example">
+        <h3>2. IA corrigindo erro de metragem</h3>
+        <div class="ia-columns">
+          <div class="before">
+            <strong>ANTES:</strong><br><br>
+            “A cozinha tem 12x15, dá uns 120 pés, né?”
+          </div>
+          <div class="after">
+            <strong>DEPOIS (IA):</strong><br><br>
+            “12x15 ft = 180 sq ft.  
+            O cálculo estava errado em 33%.  
+            Novo preço sugerido considerando o total correto.”
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 3 -->
+      <div class="ia-example">
+        <h3>3. IA revisando invoice antes de enviar</h3>
+        <div class="ia-columns">
+          <div class="before">
+            <strong>ANTES:</strong><br><br>
+            Invoice simples, sem descrição, sem prazo, sem condições.
+          </div>
+          <div class="after">
+            <strong>DEPOIS (IA):</strong><br><br>
+            <ul>
+              <li>Descrição detalhada do serviço</li>
+              <li>Prazo claro de execução</li>
+              <li>Política de pagamento incluída</li>
+              <li>Condições de garantia adicionadas</li>
+              <li>Texto profissional e bem formatado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 4 -->
+      <div class="ia-example">
+        <h3>4. OCR: Foto → Payable automático</h3>
+        <div class="ia-columns">
+          <div class="before">
+            <strong>ANTES:</strong><br><br>
+            Foto de recibo perdida na galeria do celular.
+          </div>
+          <div class="after">
+            <strong>DEPOIS (IA + OCR):</strong><br><br>
+            <ul>
+              <li>Fornecedor identificado</li>
+              <li>Data reconhecida</li>
+              <li>Valor extraído automaticamente</li>
+              <li>Categorização automática</li>
+              <li>Vinculação à obra correta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section section-alt">
+    <div class="container" style="text-align:center;">
+      <h2>Quer testar a IA quando o app for lançado?</h2>
+      <p>Entre na lista de espera e receba prioridade no acesso.</p>
+      <a class="btn btn-primary" href="#form">Quero entrar na lista</a>
+    </div>
+  </section>
+
+</body>
+</html>
