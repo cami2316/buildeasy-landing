@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildEasy – Pixel & Analytics Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Pequeno ajuste só para esta página */
+    .analytics-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 900px) {
+      .analytics-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    pre {
+      background: rgba(13, 39, 77, 0.04);
+      border-radius: 8px;
+      padding: 10px 12px;
+      overflow-x: auto;
+      font-size: 0.78rem;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(13, 39, 77, 0.06);
+      font-size: 0.72rem;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="logo-text">
+        <img src="images/logo_web_icon_only.png" alt="BuildEasy icon" style="width:24px;height:24px;border-radius:6px;" />
+        <span class="logo-name">BuildEasy – Pixel & Analytics</span>
+      </div>
+      <a href="index.html" class="btn btn-outline">← Voltar para landing</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container analytics-layout">
+      <div>
+        <h1>Pixel & Analytics – Guia da Landing Page</h1>
+        <p class="section-sub">
+          Esta página é só para você / time interno.  
+          Aqui ficam os códigos e a lista de eventos para conectar:
+          <span class="tag-pill">Google Analytics 4</span>
+          <span class="tag-pill">Meta Pixel</span>
+          <span class="tag-pill">Microsoft Clarity</span>
+        </p>
+
+        <h2>1. Google Analytics 4 (GA4)</h2>
+        <p><strong>Objetivo:</strong> ver visitas, países, aparelhos, páginas vistas.</p>
+        <ol>
+          <li>Crie uma conta em <strong>Google Analytics</strong> (GA4).</li>
+          <li>Crie uma <em>Property</em> para o site <code>cami2316.github.io/buildeasy-landing</code>.</li>
+          <li>Copie o <strong>Measurement ID</strong>, algo como <code>G-XXXXXXXXXX</code>.</li>
+        </ol>
+        <p>Depois, cole este código dentro do <code>&lt;head&gt;</code> da página que quiser rastrear (ex: <code>index.html</code>):</p>
+
+        <pre><code>&lt;!-- Google Analytics 4 --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+&lt;/script&gt;</code></pre>
+
+        <p>Trocar <code>G-XXXXXXXXXX</code> pelo seu ID real.</p>
+
+        <h3>Eventos recomendados (landing)</h3>
+        <ul>
+          <li><code>waitlist_cta_click</code> – clique em “Entrar na lista de espera”.</li>
+          <li><code>waitlist_page_view</code> – quando a pessoa abre <code>waitlist.html</code>.</li>
+          <li><code>ai_page_view</code> – quando visita <code>ia.html</code>.</li>
+          <li><code>ocr_page_view</code> – quando visita <code>ocr.html</code>.</li>
+          <li><code>pricing_page_view</code> – quando visita <code>pricing.html</code>.</li>
+        </ul>
+
+        <p>Exemplo de função para disparar clique do CTA (colocar perto do final do <code>&lt;body&gt;</code>):</p>
+
+        <pre><code>&lt;script&gt;
+  function trackWaitlistClick() {
+    if (window.gtag) {
+      gtag('event', 'waitlist_cta_click', {
+        event_category: 'engagement',
+        event_label: 'Hero button'
+      });
+    }
+    if (window.fbq) {
+      fbq('trackCustom', 'WaitlistCTAClick');
+    }
+    if (window.clarity) {
+      clarity('event', 'waitlist_cta_click');
+    }
+  }
+&lt;/script&gt;</code></pre>
+
+        <p>E no botão da landing (<code>index.html</code>):</p>
+        <pre><code>&lt;a class="btn btn-primary" href="waitlist.html" onclick="trackWaitlistClick()"&gt;
+  Entrar na lista de espera
+&lt;/a&gt;</code></pre>
+      </div>
+
+      <div>
+        <h2>2. Meta Pixel (Facebook / Instagram)</h2>
+        <p><strong>Objetivo:</strong> rodar anúncios e fazer remarketing.</p>
+        <ol>
+          <li>Abra o <strong>Meta Business</strong> (Business Manager).</li>
+          <li>Crie um <strong>Pixel</strong> novo.</li>
+          <li>Copie o <strong>Pixel ID</strong>, algo como <code>123456789012345</code>.</li>
+        </ol>
+        <p>Código para colar logo depois do GA4, ainda dentro do <code>&lt;head&gt;</code>:</p>
+
+        <pre><code>&lt;!-- Meta Pixel --&gt;
+&lt;script&gt;
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&amp;ev=PageView&amp;noscript=1"/&gt;
+&lt;/noscript&gt;</code></pre>
+
+        <p>Trocar <code>YOUR_PIXEL_ID</code> pelo seu ID real.</p>
+
+        <h3>Eventos personalizados sugeridos</h3>
+        <ul>
+          <li><code>WaitlistCTAClick</code> – clique na lista de espera.</li>
+          <li><code>AIPageView</code> – visita página da IA.</li>
+          <li><code>OCRPageView</code> – visita página do OCR.</li>
+        </ul>
+
+        <h2 style="margin-top:32px;">3. Microsoft Clarity (mapa de calor)</h2>
+        <p><strong>Objetivo:</strong> ver mapa de calor, gravações de sessão, onde o usuário emperra.</p>
+        <ol>
+          <li>Crie conta em <strong>clarity.microsoft.com</strong>.</li>
+          <li>Crie um projeto para <code>cami2316.github.io/buildeasy-landing</code>.</li>
+          <li>Copie o ID do Clarity, algo como <code>a1b2c3d4e5</code>.</li>
+        </ol>
+
+        <p>Código para colar no <code>&lt;head&gt;</code>, depois do Pixel:</p>
+        <pre><code>&lt;!-- Microsoft Clarity --&gt;
+&lt;script type="text/javascript"&gt;
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "CLARITY_ID");
+&lt;/script&gt;</code></pre>
+
+        <p>Trocar <code>CLARITY_ID</code> pelo ID real.</p>
+
+        <h2 style="margin-top:32px;">4. Eventos futuros dentro do app (BuildEasy)</h2>
+        <p>Quando o app estiver rodando, estes são eventos bons para enviar para GA4 / Pixel:</p>
+        <ul>
+          <li><code>estimate_created</code> – usuário criou um estimate.</li>
+          <li><code>estimate_converted_to_invoice</code> – converteu para invoice.</li>
+          <li><code>work_created</code> – nova obra criada.</li>
+          <li><code>work_profit_viewed</code> – abriu tela de lucro por obra.</li>
+          <li><code>daily_work_created</code> – registrou diária.</li>
+          <li><code>receipt_scanned_ocr</code> – usou OCR para recibo.</li>
+          <li><code>ai_suggestion_applied</code> – aceitou sugestão da IA.</li>
+          <li><code>waitlist_signup</code> / <code>plan_upgrade</code> – upgrade de plano.</li>
+        </ul>
+
+        <p style="margin-top:20px;font-size:0.9rem;color:#6B6B6B;">
+          Quando você tiver os IDs reais (GA, Pixel, Clarity), basta:
+          1) copiar os blocos acima para o &lt;head&gt; do <strong>index.html</strong> e <strong>waitlist.html</strong>  
+          2) ativar a função <code>trackWaitlistClick()</code> no botão da landing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>BuildEasy by Biaggio • Internal tracking guide (Pixel &amp; Analytics).</p>
+      <p class="footer-small">
+        Este arquivo é só documentação. Nada aqui é obrigatório para o usuário final.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
