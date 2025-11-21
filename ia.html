@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BuildEasy – Inteligência Artificial para 1099</title>
+  <title>BuildEasy – Inteligência que ajuda você na obra</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     .ia-section {
@@ -29,6 +29,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+      align-items: flex-start;
     }
 
     @media (max-width: 768px) {
@@ -62,31 +63,69 @@
       font-size: 0.8rem;
       margin-bottom: 18px;
     }
+
+    .ia-benefits {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .ia-benefits ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .ia-benefits li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- TOPO / MENU -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="logo-text">
+        <img src="images/logo_web_horizontal.png" alt="BuildEasy Logo" style="height:42px;">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="ia.html">Inteligência</a>
+        <a href="ocr.html">Recibos em 1 foto</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="waitlist.html">Lista de Espera</a>
+      </nav>
+      <a href="waitlist.html" class="btn btn-outline">Quero testar</a>
+    </div>
+  </header>
+
   <!-- HERO IA -->
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <span class="badge-ia">Inteligência Artificial BuildEasy</span>
-        <h1>IA que te ajuda a cobrar certo, organizar suas obras e trabalhar como profissional</h1>
+        <span class="badge-ia">Inteligência BuildEasy</span>
+        <h1>A ajuda que te ensina a cobrar certo, organizar as obras e economizar horas por semana.</h1>
         <p class="hero-sub">
-          Exatamente do jeito que um instalador 1099 precisa: simples, prática e direta ao ponto.  
-          A IA do BuildEasy transforma caos em organização.
+          Você manda o que tem — mensagem, texto bagunçado, ideia solta — e o BuildEasy transforma em
+          estimate profissional, explica o preço passo a passo e deixa tudo organizado dentro do app.
         </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="waitlist.html">Quero testar quando lançar</a>
+          <p class="hero-note">Recursos de inteligência estarão disponíveis primeiro para quem estiver na lista de espera.</p>
+        </div>
       </div>
+
       <div class="hero-card">
-        <h2>O que a IA faz por você?</h2>
+        <h2>Na prática, o que ela faz por você?</h2>
         <ul>
-          <li>Transforma texto bagunçado em estimates profissionais</li>
-          <li>Revisa preço e alerta se está baixo demais</li>
-          <li>Corrige erros comuns de cálculo e metragem</li>
-          <li>Escreve escopos sérios para enviar ao cliente</li>
-          <li>Explica passo a passo como cobrar cada tipo de job</li>
-          <li>Converte recibos em payables via OCR</li>
+          <li>Transforma mensagem simples em estimate com cara de empresa séria.</li>
+          <li>Avisa quando você está cobrando barato demais pelo trabalho.</li>
+          <li>Confere metragem e corrige cálculo antes de você fechar preço.</li>
+          <li>Melhora o texto do invoice para o cliente levar mais a sério.</li>
+          <li>Explica como cobrar cada tipo de serviço, em linguagem simples.</li>
+          <li>Ajuda a organizar despesas a partir de fotos de recibos.</li>
         </ul>
       </div>
     </div>
@@ -96,103 +135,131 @@
   <section class="ia-section">
     <div class="container">
 
-      <h2>Exemplos reais do que a IA faz</h2>
+      <h2>Veja exemplos reais do que ela faz</h2>
       <p class="section-sub">
-        Veja como a IA do BuildEasy organiza aquilo que normalmente vira bagunça no WhatsApp.
+        Tudo aquilo que normalmente vira bagunça no WhatsApp, caderno e fotos soltas, o BuildEasy transforma em organização.
       </p>
 
-      <!-- Example 1 -->
+      <!-- Exemplo 1 -->
       <div class="ia-example">
-        <h3>1. Transformando mensagem bagunçada em Estimate profissional</h3>
+        <h3>1. Mensagem simples → Estimate profissional</h3>
         <div class="ia-columns">
           <div class="before">
             <strong>ANTES (mensagem no WhatsApp):</strong><br><br>
             “tile 250 pé, 600 dólar, material vc compra. começo quarta se der.”
           </div>
           <div class="after">
-            <strong>DEPOIS (IA BuildEasy):</strong><br><br>
+            <strong>DEPOIS (dentro do BuildEasy):</strong><br><br>
             <ul>
-              <li>Demolição e instalação de tile – 250 sq ft</li>
-              <li>Nivelamento incluso</li>
-              <li>Materiais fornecidos pelo cliente</li>
-              <li>Preço recomendado: <strong>$1,150 – $1,350</strong></li>
-              <li>Margem sugerida: <strong>18%</strong></li>
-              <li>Condições: 50% entrada • 50% na entrega</li>
+              <li>Serviço: Demolição e instalação de tile – 250 sq ft</li>
+              <li>Preparação: Nivelamento básico incluso</li>
+              <li>Materiais: Fornecidos pelo cliente</li>
+              <li>Preço sugerido: <strong>$1,150 – $1,350</strong></li>
+              <li>Condições de pagamento: 50% na entrada • 50% na entrega</li>
+              <li>Texto pronto para enviar para o cliente por e-mail ou WhatsApp</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Example 2 -->
+      <!-- Exemplo 2 -->
       <div class="ia-example">
-        <h3>2. IA corrigindo erro de metragem</h3>
+        <h3>2. Cálculo errado de metragem → Correção automática</h3>
         <div class="ia-columns">
           <div class="before">
             <strong>ANTES:</strong><br><br>
             “A cozinha tem 12x15, dá uns 120 pés, né?”
           </div>
           <div class="after">
-            <strong>DEPOIS (IA):</strong><br><br>
-            “12x15 ft = 180 sq ft.  
-            O cálculo estava errado em 33%.  
-            Novo preço sugerido considerando o total correto.”
+            <strong>DEPOIS (ajuste dentro do app):</strong><br><br>
+            “12 x 15 ft = 180 sq ft.  
+            O cálculo estava errado em 60 sq ft.  
+            Sugestão: atualizar o preço para não trabalhar no prejuízo.”
           </div>
         </div>
       </div>
 
-      <!-- Example 3 -->
+      <!-- Exemplo 3 -->
       <div class="ia-example">
-        <h3>3. IA revisando invoice antes de enviar</h3>
+        <h3>3. Invoice fraco → Invoice que passa confiança</h3>
         <div class="ia-columns">
           <div class="before">
             <strong>ANTES:</strong><br><br>
-            Invoice simples, sem descrição, sem prazo, sem condições.
+            Invoice com uma linha só, sem descrição, sem prazo, sem condições.
           </div>
           <div class="after">
-            <strong>DEPOIS (IA):</strong><br><br>
+            <strong>DEPOIS (texto melhorado):</strong><br><br>
             <ul>
-              <li>Descrição detalhada do serviço</li>
-              <li>Prazo claro de execução</li>
-              <li>Política de pagamento incluída</li>
-              <li>Condições de garantia adicionadas</li>
-              <li>Texto profissional e bem formatado</li>
+              <li>Descrição clara do serviço feito em cada ambiente.</li>
+              <li>Prazo de execução bem definido.</li>
+              <li>Formas de pagamento explicadas.</li>
+              <li>Condições de garantia do serviço.</li>
+              <li>Texto profissional, fácil de ler e enviar.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Example 4 -->
+      <!-- Exemplo 4 -->
       <div class="ia-example">
-        <h3>4. OCR: Foto → Payable automático</h3>
+        <h3>4. Foto de recibo → Despesa organizada</h3>
         <div class="ia-columns">
           <div class="before">
             <strong>ANTES:</strong><br><br>
-            Foto de recibo perdida na galeria do celular.
+            Foto do recibo perdida na galeria do celular, sem anotação, sem valor lançado em lugar nenhum.
           </div>
           <div class="after">
-            <strong>DEPOIS (IA + OCR):</strong><br><br>
+            <strong>DEPOIS (dentro do BuildEasy):</strong><br><br>
             <ul>
-              <li>Fornecedor identificado</li>
-              <li>Data reconhecida</li>
-              <li>Valor extraído automaticamente</li>
-              <li>Categorização automática</li>
-              <li>Vinculação à obra correta</li>
+              <li>Nome do lugar identificado (ex: Home Depot).</li>
+              <li>Data do recibo reconhecida.</li>
+              <li>Valor total lido automaticamente.</li>
+              <li>Despesa classificada como material, mão de obra ou outro tipo.</li>
+              <li>Ligada direto à obra certa, sem você precisar lembrar depois.</li>
             </ul>
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- POR QUE ISSO IMPORTA -->
+  <section class="section section-alt">
+    <div class="container ia-benefits">
+      <h2>Por que isso muda sua vida na construção</h2>
+      <p class="section-sub">
+        Não é sobre tecnologia bonita. É sobre você parar de perder dinheiro e tempo por falta de organização.
+      </p>
+      <ul>
+        <li>✔ Você passa a cobrar melhor pelos seus serviços.</li>
+        <li>✔ Seus clientes começam a enxergar você como empresa, não “faz-tudo”.</li>
+        <li>✔ Você erra menos em metragem e preço.</li>
+        <li>✔ Você ganha horas por semana que antes iam embora em conta e recado.</li>
+        <li>✔ Fica muito mais fácil crescer e pegar obras maiores.</li>
+      </ul>
     </div>
   </section>
 
   <!-- CTA FINAL -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container" style="text-align:center;">
-      <h2>Quer testar a IA quando o app for lançado?</h2>
-      <p>Entre na lista de espera e receba prioridade no acesso.</p>
-      <a class="btn btn-primary" href="#form">Quero entrar na lista</a>
+      <h2>Quer testar essa inteligência quando o app for lançado?</h2>
+      <p class="section-sub">
+        Entre na lista de espera e receba primeiro o acesso aos recursos de inteligência e organização do BuildEasy.
+      </p>
+      <a class="btn btn-primary" href="waitlist.html">Quero entrar na lista de espera</a>
     </div>
   </section>
 
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>BuildEasy by Biaggio • Feito para quem vive de obra nos EUA.</p>
+      <p class="footer-small">Lançamento oficial previsto: 31 de janeiro de 2026 • Recursos de inteligência liberados por etapas.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
+
