@@ -14,7 +14,12 @@
     <a href="index.html" class="logo">
       <img src="images/logo_web_horizontal.png" alt="BuildEasy logo" class="logo-img" />
     </a>
-
+<!-- 👉 BOTÃO HAMBÚRGUER AQUI 👈 -->
+<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
     <nav class="nav">
       <a href="index.html#como-funciona">Como funciona</a>
       <a href="index.html#features">Recursos</a>
@@ -156,6 +161,19 @@
     <p>BuildEasy by Biaggio • Organize sua vida, ganhe tempo e profissionalize seus jobs.</p>
   </div>
 </footer>
+<script>
+  (function () {
+    const topbar = document.querySelector('.topbar');
+    const toggle = document.querySelector('.nav-toggle');
+
+    if (!topbar || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      const isOpen = topbar.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 
 </body>
 </html>
