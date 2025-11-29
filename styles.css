@@ -54,13 +54,6 @@ body {
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 32px;
 }
-
-@media (max-width: 768px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ===================== TOPBAR ===================== */
 
 .topbar {
@@ -80,7 +73,7 @@ body {
   gap: 16px;
 }
 
-/* Logo */
+/* ===================== LOGO ===================== */
 
 .logo {
   display: flex;
@@ -92,7 +85,7 @@ body {
   width: auto;
 }
 
-/* Nav (desktop) */
+/* ===================== NAV DESKTOP ===================== */
 
 .nav {
   display: flex;
@@ -109,7 +102,7 @@ body {
   color: var(--blue-dark);
 }
 
-/* ===================== HAMBURGUER BUTTON ===================== */
+/* ===================== HAMBURGER BUTTON ===================== */
 
 .nav-toggle {
   display: none;
@@ -129,15 +122,13 @@ body {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Estado ativo (X) */
+/* animação do X */
 .topbar.nav-open .nav-toggle span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
-
 .topbar.nav-open .nav-toggle span:nth-child(2) {
   opacity: 0;
 }
-
 .topbar.nav-open .nav-toggle span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
@@ -145,73 +136,32 @@ body {
 /* ===================== NAV MOBILE ===================== */
 
 @media (max-width: 768px) {
+
   .topbar-inner {
     gap: 10px;
+    align-items: center;
   }
 
-  /* mostrar botão */
+  /* mostra o hambúrguer */
   .nav-toggle {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     margin-left: auto;
   }
 
-  /* esconder nav padrão */
+  /* esconde nav padrão */
   .nav {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: #ffffff;
-    padding: 12px 20px 16px;
     display: none;
     flex-direction: column;
     gap: 12px;
+    padding: 12px 0 16px;
+    background: #ffffff;
     border-bottom: 1px solid rgba(13, 39, 77, 0.12);
-    z-index: 999;
   }
 
-  /* abrir nav */
+  /* quando abrir */
   .topbar.nav-open .nav {
     display: flex;
   }
-}
-
-/* ===================== Buttons ===================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: var(--blue-dark);
-  color: #fff;
-  box-shadow: var(--shadow-soft);
-}
-
-.btn-primary:hover {
-  opacity: 0.92;
-}
-
-.btn-outline {
-  border: 1px solid var(--blue-dark);
-  color: var(--blue-dark);
-  background: #fff;
-}
-
-.btn-outline:hover {
-  background: var(--blue-dark);
-  color: #fff;
 }
 
 /* ===================== Hero ===================== */
