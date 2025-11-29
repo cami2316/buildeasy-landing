@@ -90,7 +90,13 @@
     <div class="logo-text">
       <img src="images/logo_web_horizontal.png" alt="BuildEasy Logo" style="height:42px;">
     </div>
-
+    
+ <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
     <nav class="nav">
       <a href="index.html">Início</a>
       <a href="ia.html">IA</a>
@@ -263,7 +269,19 @@
       <p class="footer-small">Lançamento oficial previsto: primeiro trimestre de 2026  • Recursos de inteligência liberados por etapas.</p>
     </div>
   </footer>
+<script>
+  (function () {
+    const topbar = document.querySelector('.topbar');
+    const toggle = document.querySelector('.nav-toggle');
 
+    if (!topbar || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      const isOpen = topbar.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 </body>
 </html>
 
