@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildEasy by Biaggio – Organiza tu trabajo de obra</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon_32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="images/icon_64.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon_256.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon_512.png" />
+</head>
+
+<body>
+
+  <!-- ========================= HEADER ========================= -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+
+      <!-- LOGO -->
+      <a href="index_es.html" class="logo">
+        <img 
+          src="images/logo_web_horizontal.png" 
+          alt="BuildEasy by Biaggio"
+          class="logo-img"
+        />
+      </a>
+
+      <nav class="nav">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#features">Funciones</a>
+        <a href="pricing_es.html">Planes</a>
+        <a href="#faq">FAQ</a>
+        <a href="ia_es.html">Inteligencia BuildEasy</a>
+        <a href="ocr_es.html">Lector de recibos</a>
+      </nav>
+
+      <a href="waitlist_es.html" class="btn btn-outline">Lista de espera</a>
+    </div>
+  </header>
+
+  <!-- ========================= HERO ========================= -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <!-- HERO TEXT -->
+      <div class="hero-text">
+        <p class="badge">Hecho para quienes viven de la obra en EE.UU.</p>
+
+        <h1>
+          Tú haces un trabajo perfecto. <br />
+          BuildEasy organiza el resto.
+        </h1>
+
+        <p class="hero-sub">
+          Si trabajas todo el mes y al final no sabes si ganaste bien o solo diste vueltas,
+          este app es para ti. BuildEasy te ayuda a cobrar correctamente, organizar tus trabajos
+          y ver si realmente estás ganando lo que mereces.
+        </p>
+
+        <div class="hero-actions" id="cta">
+          <a class="btn btn-primary" href="waitlist_es.html">Unirme a la lista de espera</a>
+          <a class="btn btn-outline" href="ia_es.html">Ver Inteligencia BuildEasy</a>
+          <p class="hero-note">Lanzamiento oficial: Primer trimestre de 2026</p>
+        </div>
+
+        <ul class="hero-bullets">
+          <li>📲 Todo en un solo lugar: trabajos, clientes, empleados y pagos.</li>
+          <li>💵 Mira si tu trabajo dio ganancia o pérdida, sin adivinanzas.</li>
+          <li>📸 Toma una foto del recibo o Work Order y deja que el app complete el resto.</li>
+        </ul>
+      </div>
+
+      <!-- HERO SIDE CARD -->
+      <div class="hero-card">
+        <img 
+          src="images/logo_icon_transparent.png"
+          alt="BuildEasy icon"
+          class="hero-card-logo"
+          style="display:block; margin:0 auto 12px; max-width:80px;"
+        />
+
+        <h2>¿Te identificas con esto?</h2>
+
+        <ul>
+          <li>Trabajas duro, pero nunca estás seguro si realmente ganaste dinero.</li>
+          <li>Anotas precios en papel, notas del celular, WhatsApp… y luego te pierdes.</li>
+          <li>Recibos, materiales y horas de helpers quedan regados por el teléfono.</li>
+          <li>Te da pena enviar una “invoice improvisada” al cliente.</li>
+        </ul>
+
+        <p class="hero-card-footer">
+          BuildEasy fue creado para sacarte del caos y ponerte en control total.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================= PARA QUIÉN ES ========================= -->
+  <section class="section" id="para-quem">
+    <div class="container two-col">
+      <div>
+        <h2>¿Para quién es BuildEasy?</h2>
+        <p>
+          Para quienes trabajan en instalación, remodelación, tile, pintura, drywall, carpintería,
+          limpieza post-obra y otros trabajos de construcción en EE.UU., como autónomos
+          o pequeños equipos.
+        </p>
+      </div>
+
+      <div class="pill-grid">
+        <span class="pill">Instalador por trabajo</span>
+        <span class="pill">Pequeña empresa de construcción</span>
+        <span class="pill">Subcontratista que quiere organizarse</span>
+        <span class="pill">Inmigrante que aprendió todo a pulso</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= DOLOR REAL ========================= -->
+  <section class="section section-alt">
+    <div class="container two-col">
+      <div>
+        <h2>El dolor real de quien vive de la obra</h2>
+        <p>
+          Trabajas fuerte, haces un buen servicio, el cliente te felicita…  
+          pero cuando miras los números aparece la duda:
+          “¿Valió la pena esta obra o solo trabajé para pagar cuentas?”
+        </p>
+      </div>
+
+      <ul class="checklist checklist-danger">
+        <li>❌ No saber si el mes cerró en positivo o negativo.</li>
+        <li>❌ Cobrar “al ojo”, sin cálculo real de materiales y horas.</li>
+        <li>❌ Recibos perdidos, fotos regadas, nada organizado.</li>
+        <li>❌ Cliente que se aprovecha porque el presupuesto no se ve profesional.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================= FUNCIONES ========================= -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2>Cómo BuildEasy te ayuda en la práctica</h2>
+      <p class="section-sub">
+        No es una hoja complicada ni un sistema hecho para oficina.  
+        Es un app pensado para quien pasa el día en la obra y necesita claridad rápida.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Presupuestos y cobros profesionales</h3>
+          <p>
+            Crea presupuestos claros con descripción, condiciones y pagos.
+            Conviértelos en cobros con pocos toques.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Control de trabajos y equipo</h3>
+          <p>
+            Acompaña obras, horas, diarias y pagos de helpers y subcontratados.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Flujo de caja y ganancia por obra</h3>
+          <p>
+            Mira cuánto entró, cuánto salió y si realmente ganaste dinero en ese trabajo.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Inteligencia BuildEasy</h3>
+          <p>
+            Lee tus textos confusos y los transforma en presupuestos profesionales,
+            revisa precios y detecta errores de metraje.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Lector de Recibos y Work Orders</h3>
+          <p>
+            Toma una foto y el app completa proveedor, fecha, monto y hasta crea el job.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Multilenguaje real</h3>
+          <p>
+            Español, Portugués e Inglés. Textos pensados para inmigrantes.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:10px;">
+        <a href="ia_es.html" class="btn btn-outline">Ver ejemplos de Inteligencia</a>
+        <a href="ocr_es.html" class="btn btn-outline">Ver cómo funciona el lector</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CÓMO FUNCIONA ========================= -->
+  <section class="section section-alt" id="como-funciona">
+    <div class="container">
+      <h2>Cómo funciona en el día a día</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Registra tu empresa y clientes</h3>
+          <p>En minutos colocas lo básico.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Crea presupuestos serios</h3>
+          <p>Describe el trabajo, precio y condiciones.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Organiza costos, horas y recibos</h3>
+          <p>Registra materiales, diarias y usa el lector para no perder nada.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <h3>Mira el resultado real</h3>
+          <p>BuildEasy te muestra si ganaste dinero o no.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= PLANES ========================= -->
+  <section class="section" id="planos">
+    <div class="container">
+      <h2>Planes pensados para inmigrantes</h2>
+      <p class="section-sub">Simples, directos y sin complicación.</p>
+
+      <div class="plans">
+
+        <!-- FREE -->
+        <div class="plan-card">
+          <h3>Free</h3>
+          <p class="price">$0 / mes</p>
+          <ul>
+            <li>Presupuestos simples</li>
+            <li>Invoices básicas</li>
+            <li>Dashboard inicial</li>
+            <li>Clientes ilimitados</li>
+            <li>1 usuario</li>
+          </ul>
+          <a href="waitlist_es.html" class="btn btn-outline">Comenzar gratis</a>
+        </div>
+
+        <!-- PRO MENSUAL -->
+        <div class="plan-card plan-card-highlight">
+          <h3>Pro — Mensual</h3>
+          <p class="price">$29 / mes</p>
+          <p class="promo">Lanzamiento: $9,90 el primer mes</p>
+          <ul>
+            <li>Presupuestos completos</li>
+            <li>Invoices profesionales en PDF</li>
+            <li>Flujo de caja real</li>
+            <li>Ganancia por obra</li>
+            <li>Digitalización de Work Orders y recibos</li>
+            <li>IA para presupuestos e invoices</li>
+            <li>Control del equipo</li>
+          </ul>
+          <a href="waitlist_es.html" class="btn btn-primary">Suscribirse</a>
+        </div>
+
+        <!-- PRO ANUAL -->
+        <div class="plan-card">
+          <h3>Pro — Anual</h3>
+          <p class="price">$280 / año</p>
+          <p class="promo">Ahorra 2.5 meses</p>
+          <ul>
+            <li>Todo del Pro Mensual</li>
+            <li>Ahorro garantizado</li>
+            <li>Activación prioritaria</li>
+            <li>1 pago anual</li>
+          </ul>
+          <a href="waitlist_es.html" class="btn btn-outline">Suscribirse Anual</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FORM ========================= -->
+  <section class="section section-alt" id="form">
+    <div class="container two-col">
+      <div>
+        <h2>Únete a la lista de espera</h2>
+        <p>
+          ¿Quieres probar el app antes que los demás, con precio de lanzamiento y contenido exclusivo?
+          Solo deja tu nombre y correo.
+        </p>
+        <a href="waitlist_es.html" class="btn btn-primary" style="margin-top:12px;">Ir a la lista</a>
+      </div>
+
+      <div class="form-placeholder">
+        <p><strong>Lista de espera BuildEasy</strong></p>
+        <p>
+          El formulario completo está en la página de lista de espera.  
+          Haz clic para inscribirte.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FAQ ========================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>Preguntas rápidas</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>¿Necesito hablar inglés?</h3>
+          <p>No. El app funciona en Español, Portugués e Inglés.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Sirve solo para tile?</h3>
+          <p>No. Funciona para cualquier trabajo de instalación o remodelación.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Igual necesitaré contable?</h3>
+          <p>Sí, para impuestos siempre ayuda. Pero BuildEasy deja todo organizado.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Es difícil de usar?</h3>
+          <p>No. Fue diseñado para quienes trabajan en obra, no para oficina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>BuildEasy by Biaggio • App creado por contratistas inmigrantes para quienes viven de la obra.</p>
+      <p class="footer-small">Lanzamiento previsto: Primer trimestre de 2026 • Únete para recibir novedades.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
