@@ -12,6 +12,12 @@
 <header class="topbar">
   <div class="container topbar-inner">
     <img src="images/logo_web_horizontal.png" alt="BuildEasy Logo" style="height:42px;">
+    <!-- 👉 BOTÃO HAMBÚRGUER AQUI 👈 -->
+<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
     <nav class="nav">
       <a href="index_es.html">Inicio</a>
       <a href="ia_es.html">IA</a>
@@ -93,6 +99,19 @@
     <p>BuildEasy by Biaggio • Organiza tu empresa y trabaja con más profesionalismo.</p>
   </div>
 </footer>
+<script>
+  (function () {
+    const topbar = document.querySelector('.topbar');
+    const toggle = document.querySelector('.nav-toggle');
+
+    if (!topbar || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      const isOpen = topbar.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 
 </body>
 </html>
