@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildEasy – Plans & Pricing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="index_en.html" class="logo">
+      <img src="images/logo_web_horizontal.png" alt="BuildEasy logo" class="logo-img" />
+    </a>
+
+    <nav class="nav">
+      <a href="index_en.html#how-it-works">How it works</a>
+      <a href="index_en.html#features">Features</a>
+      <a href="pricing_en.html">Pricing</a>
+      <a href="index_en.html#faq">FAQ</a>
+    </nav>
+
+    <a href="waitlist_en.html" class="btn btn-outline">Join Waitlist</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1 style="margin-bottom:16px">BuildEasy Plans</h1>
+    <p class="section-sub">Choose the ideal plan for your work routine. Simple and straightforward.</p>
+
+    <div class="plans-grid">
+
+      <!-- FREE -->
+      <div class="pricing-card">
+        <h2>Free</h2>
+        <p class="price">$0 / month</p>
+        <ul>
+          <li>Simple estimates</li>
+          <li>Basic invoices</li>
+          <li>Starter dashboard</li>
+          <li>Unlimited clients</li>
+        </ul>
+        <a href="waitlist_en.html" class="btn btn-primary">Start Free</a>
+      </div>
+
+      <!-- PRO MONTHLY -->
+      <div class="pricing-card highlight">
+        <h2>Pro — Monthly</h2>
+        <p class="price">$29 / month</p>
+        <p class="promo">Launch promo: $9.90 for the first month</p>
+        <ul>
+          <li>Full estimates</li>
+          <li>Professional PDF invoices</li>
+          <li>Real cashflow</li>
+          <li>Profit per job</li>
+          <li>OCR — receipts → costs</li>
+          <li>AI for estimates & invoices</li>
+        </ul>
+        <a href="waitlist_en.html" class="btn btn-primary">Subscribe Monthly</a>
+      </div>
+
+      <!-- PRO YEARLY -->
+      <div class="pricing-card">
+        <h2>Pro — Yearly</h2>
+        <p class="price">$280 / year</p>
+        <p class="promo">Save 2.5 months</p>
+        <ul>
+          <li>Everything in Pro Monthly</li>
+          <li>Guaranteed yearly savings</li>
+          <li>Priority activation</li>
+          <li>1 payment per year (no surprises)</li>
+        </ul>
+        <a href="waitlist_en.html" class="btn btn-primary">Subscribe Yearly</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>Compare Plans</h2>
+
+    <div class="pricing-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Features</th>
+            <th>Free</th>
+            <th>Pro Monthly</th>
+            <th>Pro Yearly</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Simple estimates</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>Full estimates</td>
+            <td>—</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>Professional PDF invoices</td>
+            <td>—</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>Cashflow</td>
+            <td>—</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>Profit per job</td>
+            <td>—</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>OCR — Photo → Automatic cost</td>
+            <td>—</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>AI price suggestions</td>
+            <td>—</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>Yearly savings</td>
+            <td>—</td>
+            <td>—</td>
+            <td>✔️ (2.5 months free)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>BuildEasy by Biaggio • Organize your work, save time and run jobs like a pro.</p>
+  </div>
+</footer>
+
+</body>
+</html>
