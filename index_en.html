@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BuildEasy by Biaggio – Take Control of Your Construction Work</title>
+  <title>BuildEasy by Biaggio – Organize your construction work</title>
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -12,6 +12,29 @@
   <link rel="icon" type="image/png" sizes="64x64" href="images/icon_64.png" />
   <link rel="icon" type="image/png" sizes="256x256" href="images/favicon_256.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="images/favicon_512.png" />
+
+  <style>
+    .lang-switcher {
+      display: flex;
+      gap: 10px;
+      font-size: 0.85rem;
+      align-items: center;
+    }
+
+    .lang-switcher a {
+      color: #0d274d;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .lang-switcher a:hover {
+      border-color: #0d274d;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,22 +52,23 @@
         />
       </a>
 
-      <nav class="nav">
-        <a href="#how-it-works">How it works</a>
-        <a href="#features">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="ia.html">BuildEasy Intelligence</a>
-        <a href="ocr.html">Receipt Scanner</a>
-      </nav>
-
-      <div class="lang-switch">
-        <a href="index.html">PT</a> |
-        <a href="index_en.html" style="font-weight:bold;">EN</a> |
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switcher">
+        <a href="index.html">PT</a>
+        <a href="index_en.html">EN</a>
         <a href="index_es.html">ES</a>
       </div>
 
-      <a href="waitlist.html" class="btn btn-outline">Join Waitlist</a>
+      <nav class="nav">
+        <a href="index_en.html">Home</a>
+        <a href="ia_en.html">AI</a>
+        <a href="ocr_en.html">Receipts</a>
+        <a href="portfolio_en.html">Portfolio</a>
+        <a href="pricing_en.html">Pricing</a>
+        <a href="waitlist_en.html">Waitlist</a>
+      </nav>
+
+      <a href="waitlist_en.html" class="btn btn-outline">Join waitlist</a>
     </div>
   </header>
 
@@ -54,36 +78,36 @@
 
       <!-- HERO TEXT -->
       <div class="hero-text">
-        <p class="badge">Built for construction workers in the USA</p>
+        <p class="badge">Made for contractors in the USA</p>
 
         <h1>
-          You deliver flawless work. <br />
+          You build great work. <br />
           BuildEasy organizes everything else.
         </h1>
 
         <p class="hero-sub">
-          If you work all month and still don’t know whether you made good money
-          or just “broke even,” this app is for you. BuildEasy helps you charge correctly,
-          organize your jobs, and finally understand if your work is truly profitable.
+          If you work the whole month and still don’t know if you made money
+          or just moved cash around, this app is for you. BuildEasy helps you
+          charge correctly, organize your jobs and see if the work is truly profitable.
         </p>
 
         <div class="hero-actions" id="cta">
-          <a class="btn btn-primary" href="waitlist.html">Join the waitlist</a>
-          <a class="btn btn-outline" href="ia.html">See BuildEasy Intelligence</a>
-          <p class="hero-note">Official launch: Early 2026</p>
+          <a class="btn btn-primary" href="waitlist_en.html">Join the waitlist</a>
+          <a class="btn btn-outline" href="ia_en.html">See BuildEasy Intelligence</a>
+          <p class="hero-note">Official launch: Q1 2026</p>
         </div>
 
         <ul class="hero-bullets">
-          <li>📲 Jobs, clients, team members, and payments — all in one app.</li>
-          <li>💵 See real profit or loss for every job.</li>
-          <li>📸 Take a photo of receipts or work orders and let the app fill out the rest.</li>
+          <li>📲 Everything in one place: jobs, clients, workers and payments.</li>
+          <li>💵 See if each job had profit or loss — no guessing.</li>
+          <li>📸 Take a photo of the receipt or Work Order and let the app fill everything.</li>
         </ul>
       </div>
 
       <!-- HERO SIDE CARD -->
       <div class="hero-card">
         <img 
-          src="images/logo_transparente.png"
+          src="images/logo_icon_transparent.png"
           alt="BuildEasy icon"
           class="hero-card-logo"
           style="display:block; margin:0 auto 12px; max-width:80px;"
@@ -92,138 +116,108 @@
         <h2>Do you relate to this?</h2>
 
         <ul>
-          <li>You work hard but never know if the job actually made a profit.</li>
-          <li>You write prices on paper, Notes, WhatsApp… and get lost later.</li>
-          <li>Receipts, materials, and helpers’ hours are scattered everywhere.</li>
-          <li>You feel embarrassed sending an “improvised” invoice to a client.</li>
+          <li>You work hard but never know if the job really made money.</li>
+          <li>You write prices on paper, notes, WhatsApp… and lose track later.</li>
+          <li>Receipts, materials and helpers’ hours spread everywhere on your phone.</li>
+          <li>You feel embarrassed sending “improvised invoices” to clients.</li>
         </ul>
 
         <p class="hero-card-footer">
-          BuildEasy was created to take you out of this chaos and put you back in control.
+          BuildEasy was created to take you out of this chaos and put you in control.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- ========================= WHO IS IT FOR ========================= -->
-  <section class="section" id="who">
+  <!-- ========================= WHO IT'S FOR ========================= -->
+  <section class="section" id="for-who">
     <div class="container two-col">
       <div>
         <h2>Who is BuildEasy for?</h2>
         <p>
-          For installers, remodelers, tile workers, painters, drywallers, carpenters,
-          cleaners, and all construction workers in the USA — self-employed or with a small crew.
+          For installers, remodelers, tile workers, painters, drywall finishers,
+          carpenters, cleaners and anyone working construction in the USA,
+          alone or with a small team.
         </p>
       </div>
 
       <div class="pill-grid">
         <span class="pill">Job-based installers</span>
-        <span class="pill">Small construction companies</span>
-        <span class="pill">Subcontractors who need organization</span>
-        <span class="pill">Immigrants who learned everything the hard way</span>
+        <span class="pill">Small construction teams</span>
+        <span class="pill">Subcontractors</span>
+        <span class="pill">Immigrants who learned by working hard</span>
       </div>
     </div>
   </section>
 
-  <!-- ========================= PAIN ========================= -->
+  <!-- ========================= REAL PAIN ========================= -->
   <section class="section section-alt">
     <div class="container two-col">
       <div>
-        <h2>The real pain of construction workers</h2>
+        <h2>The real pain of working construction</h2>
         <p>
-          You work hard, deliver quality, clients praise you…  
-          but when you check the numbers, the doubt hits:
-          “Did this job really pay off or did I just work to pay bills?”
+          You work hard, deliver quality, clients praise you…
+          but when you sit down to look at the money, the doubt hits:
+          “Did this job pay off or did I just work to pay bills?”
         </p>
       </div>
 
       <ul class="checklist checklist-danger">
-        <li>❌ Not knowing if the month ended in profit or loss.</li>
-        <li>❌ Charging “by eye,” without accurate calculations.</li>
-        <li>❌ Lost receipts, scattered photos, no organization.</li>
-        <li>❌ Clients delaying payment because the estimate doesn’t look professional.</li>
+        <li>❌ Not knowing if the month ended positive or negative.</li>
+        <li>❌ Charging “by eye”, with no correct calculation.</li>
+        <li>❌ Lost receipts and disorganized photos.</li>
+        <li>❌ Clients delaying payment because the estimate looks unprofessional.</li>
       </ul>
     </div>
   </section>
 
-  <!-- ========================= FEATURES ========================= -->
+  <!-- ========================= HOW BUILDEASY HELPS ========================= -->
   <section class="section" id="features">
     <div class="container">
-      <h2>How BuildEasy helps you — in real life</h2>
+      <h2>How BuildEasy helps you in real life</h2>
       <p class="section-sub">
-        Not a spreadsheet. Not a confusing desktop system.  
-        A tool designed for people who spend the day on the jobsite and need clear answers fast.
+        It’s not spreadsheets or office software.  
+        It’s an app designed for people who spend their day on site and need clarity fast.
       </p>
 
       <div class="feature-grid">
+
         <div class="feature-card">
           <h3>Professional estimates & invoices</h3>
-          <p>Create clean estimates and convert them to invoices in seconds.</p>
+          <p>Create clear estimates with description, conditions and installments.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Job & crew control</h3>
-          <p>Track jobs, hours, helpers, subcontractors, and daily work.</p>
+          <h3>Job & team control</h3>
+          <p>Track jobs, helpers, hours and payments without relying on memory.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Real cashflow & profit per job</h3>
-          <p>Finally see where your money is going and what truly brings profit.</p>
+          <h3>Cashflow & job profit</h3>
+          <p>See what came in, what went out and if the job truly made profit.</p>
         </div>
 
         <div class="feature-card">
           <h3>BuildEasy Intelligence</h3>
-          <p>Corrects prices, reviews your text, and protects you from mistakes.</p>
+          <p>It reads your messy notes and turns them into professional estimates.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Receipt & Work Order Scanner</h3>
-          <p>Take a photo and the app fills supplier, date, amount, and job association.</p>
+          <h3>Receipts & Work Orders OCR</h3>
+          <p>Take a photo and the app fills supplier, date, value and job.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Real multilingual support</h3>
-          <p>English, Spanish, Portuguese — done properly for immigrant workers.</p>
+          <h3>Real multilingual</h3>
+          <p>English, Spanish and Portuguese — written for immigrants.</p>
         </div>
+
       </div>
 
       <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:10px;">
-        <a href="ia.html" class="btn btn-outline">See BuildEasy Intelligence examples</a>
-        <a href="ocr.html" class="btn btn-outline">See how receipt scanning works</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================= HOW IT WORKS ========================= -->
-  <section class="section section-alt" id="how-it-works">
-    <div class="container">
-      <h2>How the workflow works</h2>
-
-      <div class="steps">
-        <div class="step">
-          <span class="step-number">1</span>
-          <h3>Register your company and clients</h3>
-          <p>Enter the basics: name, contacts, type of work.</p>
-        </div>
-
-        <div class="step">
-          <span class="step-number">2</span>
-          <h3>Create serious estimates</h3>
-          <p>Describe the job, define price, conditions, and payment terms.</p>
-        </div>
-
-        <div class="step">
-          <span class="step-number">3</span>
-          <h3>Organize costs, hours, and receipts</h3>
-          <p>Track materials, day rates, and hours — or scan receipts instantly.</p>
-        </div>
-
-        <div class="step">
-          <span class="step-number">4</span>
-          <h3>See the final result</h3>
-          <p>The app shows profit or loss and where your money really went.</p>
-        </div>
+        <a href="ia_en.html" class="btn btn-outline">See AI examples</a>
+        <a href="ocr_en.html" class="btn btn-outline">See how OCR works</a>
       </div>
     </div>
   </section>
@@ -231,10 +225,11 @@
   <!-- ========================= FOOTER ========================= -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>BuildEasy by Biaggio • Created by immigrant contractors for people who live from construction work.</p>
-      <p class="footer-small">Official launch: Early 2026 • Join the waitlist to get updates.</p>
+      <p>BuildEasy by Biaggio • Created by immigrant contractors for contractors.</p>
+      <p class="footer-small">Official launch planned: Q1 2026 • Join the waitlist for updates.</p>
     </div>
   </footer>
 
 </body>
 </html>
+
