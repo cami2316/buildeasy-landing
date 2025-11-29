@@ -8,10 +8,33 @@
   <link rel="stylesheet" href="styles.css" />
 
   <!-- FAVICONS -->
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon_32.png" />
-<link rel="icon" type="image/png" sizes="64x64" href="images/icon_64.png" />
-<link rel="icon" type="image/png" sizes="256x256" href="images/favicon_256.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="images/favicon_512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon_32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="images/icon_64.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon_256.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon_512.png" />
+
+  <style>
+    .lang-switcher {
+      display: flex;
+      gap: 10px;
+      font-size: 0.85rem;
+      align-items: center;
+    }
+
+    .lang-switcher a {
+      color: #0d274d;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .lang-switcher a:hover {
+      border-color: #0d274d;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,14 +52,21 @@
         />
       </a>
 
-       <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="ia.html">IA</a>
-      <a href="ocr.html">Recibos e Work Orders</a>
-      <a href="portfolio.html">Portfólio</a>
-      <a href="pricing.html">Planos</a>
-      <a href="waitlist.html">Lista de Espera</a>
-    </nav>
+      <!-- SWITCHER DE IDIOMAS -->
+      <div class="lang-switcher">
+        <a href="index.html">PT</a>
+        <a href="index_en.html">EN</a>
+        <a href="index_es.html">ES</a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="ia.html">IA</a>
+        <a href="ocr.html">Recibos e Work Orders</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="pricing.html">Planos</a>
+        <a href="waitlist.html">Lista de Espera</a>
+      </nav>
 
       <a href="waitlist.html" class="btn btn-outline">Lista de espera</a>
     </div>
@@ -65,7 +95,6 @@
           <a class="btn btn-primary" href="waitlist.html">Entrar na lista de espera</a>
           <a class="btn btn-outline" href="ia.html">Ver Inteligência BuildEasy</a>
           <p class="hero-note">Lançamento oficial: primeiro trimestre de 2026</p>
-
         </div>
 
         <ul class="hero-bullets">
@@ -76,17 +105,15 @@
       </div>
 
       <!-- HERO SIDE CARD -->
-      <!-- HERO SIDE CARD -->
-    <div class="hero-card">
-    <img 
-    src="images/logo_transparente.png"  <-- É AQUI
-    alt="BuildEasy icon"
-    class="hero-card-logo"
-    style="display:block; margin:0 auto 12px; max-width:80px;"
-    />
+      <div class="hero-card">
+        <img 
+          src="images/logo_icon_transparent.png"
+          alt="BuildEasy icon"
+          class="hero-card-logo"
+          style="display:block; margin:0 auto 12px; max-width:80px;"
+        />
 
-  <h2>Você se reconhece nisso?</h2>
-
+        <h2>Você se reconhece nisso?</h2>
 
         <ul>
           <li>Trabalha muito, mas nunca tem certeza se a obra deu dinheiro mesmo.</li>
@@ -381,11 +408,10 @@
   </section>
 
   <!-- ========================= FOOTER ========================= -->
-  <footer class="footer">
+<footer class="footer">
     <div class="container footer-inner">
       <p>BuildEasy by Biaggio • App criado por empreiteiros imigrantes para quem vive de obra.</p>
       <p class="footer-small">Lançamento previsto: primeiro trimestre de 2026 • Entre na lista de espera e receba as novidades.</p>
-
     </div>
   </footer>
 
