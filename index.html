@@ -433,6 +433,18 @@
       <p class="footer-small">Lançamento previsto: primeiro trimestre de 2026 • Entre na lista de espera e receba as novidades.</p>
     </div>
   </footer>
+<script>
+  (function () {
+    const topbar = document.querySelector('.topbar');
+    const toggle = document.querySelector('.nav-toggle');
 
+    if (!topbar || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      const isOpen = topbar.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 </body>
 </html>
