@@ -4,47 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waitlist • BuildEasy</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGRCCZ1TBC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BGRCCZ1TBC');
-</script>
 
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGRCCZ1TBC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BGRCCZ1TBC');
+  </script>
+
+  <!-- Responsiveness fix for the Google Form -->
+  <style>
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+      }
+
+      iframe {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+      .form-placeholder {
+        width: 100% !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header class="topbar">
   <div class="container topbar-inner">
+
     <img src="images/logo_web_horizontal.png" alt="BuildEasy Logo" style="height:42px;">
-    <!-- 👉 BOTÃO HAMBÚRGUER AQUI 👈 -->
-<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-  <nav class="nav">
-  <a href="index_en.html" onclick="gtag('event','nav_home_en');">Home</a>
-  <a href="ia_en.html" onclick="gtag('event','nav_ai_en');">AI</a>
-  <a href="ocr_en.html" onclick="gtag('event','nav_ocr_en');">OCR</a>
-  <a href="portfolio_en.html" onclick="gtag('event','nav_portfolio_en');">Portfolio</a>
-  <a href="waitlist_en.html" onclick="gtag('event','nav_waitlist_en');">Waitlist</a>
-</nav>
 
-<a href="waitlist_en.html"
-   class="btn btn-outline"
-   onclick="gtag('event','click_join_waitlist_en');">
-  Join now
-</a>
+    <!-- Hamburger button -->
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
+    <nav class="nav">
+      <a href="index_en.html" onclick="gtag('event','nav_home_en');">Home</a>
+      <a href="ia_en.html" onclick="gtag('event','nav_ai_en');">AI</a>
+      <a href="ocr_en.html" onclick="gtag('event','nav_ocr_en');">OCR</a>
+      <a href="portfolio_en.html" onclick="gtag('event','nav_portfolio_en');">Portfolio</a>
+      <a href="waitlist_en.html" onclick="gtag('event','nav_waitlist_en');">Waitlist</a>
+    </nav>
+
+    <a href="waitlist_en.html"
+       class="btn btn-outline"
+       onclick="gtag('event','click_join_waitlist_en');">
+      Join now
+    </a>
+
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
+
     <div class="hero-text">
       <p class="badge">Official Pre-Launch</p>
 
@@ -71,13 +97,16 @@
         <li>Big launch discount on the Pro plan.</li>
         <li>Limited early-access spots.</li>
       </ul>
+
       <p class="hero-card-footer">
         Official launch: <strong>Q1 2026</strong>
       </p>
     </div>
+
   </div>
 </section>
 
+<!-- FORM -->
 <section class="section section-alt">
   <div class="container two-col">
 
@@ -101,19 +130,21 @@
         frameborder="0"
         marginheight="0"
         marginwidth="0"
-        style="border:0;">
-      Loading…
+        style="border:0; max-width:100%;">
+        Loading…
       </iframe>
     </div>
 
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
     <p>BuildEasy by Biaggio • Organize your business, save time and work more professionally.</p>
   </div>
 </footer>
+
 <script>
   (function () {
     const topbar = document.querySelector('.topbar');
