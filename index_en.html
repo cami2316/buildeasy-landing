@@ -91,16 +91,21 @@
   <span></span>
   <span></span>
 </button>
-      <nav class="nav">
-        <a href="index_en.html">Home</a>
-        <a href="ia_en.html">AI</a>
-        <a href="ocr_en.html">Receipts</a>
-        <a href="portfolio_en.html">Portfolio</a>
-        <a href="pricing_en.html">Pricing</a>
-        <a href="waitlist_en.html">Waitlist</a>
-      </nav>
+      <<nav class="nav">
+  <a href="index_en.html" onclick="gtag('event','nav_home_en');">Home</a>
+  <a href="ia_en.html" onclick="gtag('event','nav_ai_en');">AI</a>
+  <a href="ocr_en.html" onclick="gtag('event','nav_receipts_en');">Receipts</a>
+  <a href="portfolio_en.html" onclick="gtag('event','nav_portfolio_en');">Portfolio</a>
+  <a href="pricing_en.html" onclick="gtag('event','nav_pricing_en');">Pricing</a>
+  <a href="waitlist_en.html" onclick="gtag('event','nav_waitlist_en');">Waitlist</a>
+</nav>
 
-      <a href="waitlist_en.html" class="btn btn-outline">Join waitlist</a>
+<a href="waitlist_en.html"
+   class="btn btn-outline"
+   onclick="gtag('event','click_join_waitlist_en');">
+  Join waitlist
+</a>
+
     </div>
   </header>
 
