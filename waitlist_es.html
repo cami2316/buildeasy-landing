@@ -4,47 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lista de Espera • BuildEasy</title>
- 
+
   <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGRCCZ1TBC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BGRCCZ1TBC');
-</script>
-<link rel="stylesheet" href="styles.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGRCCZ1TBC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BGRCCZ1TBC');
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Ajuste de responsividade -->
+  <style>
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+      }
+
+      iframe {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+      .form-placeholder {
+        width: 100% !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header class="topbar">
   <div class="container topbar-inner">
+
     <img src="images/logo_web_horizontal.png" alt="BuildEasy Logo" style="height:42px;">
-    <!-- 👉 BOTÃO HAMBÚRGUER AQUI 👈 -->
-<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-   <nav class="nav">
-  <a href="index_es.html" onclick="gtag('event','nav_home_es');">Inicio</a>
-  <a href="ia_es.html" onclick="gtag('event','nav_ai_es');">IA</a>
-  <a href="ocr_es.html" onclick="gtag('event','nav_ocr_es');">OCR</a>
-  <a href="portfolio_es.html" onclick="gtag('event','nav_portfolio_es');">Portafolio</a>
-  <a href="waitlist_es.html" onclick="gtag('event','nav_waitlist_es');">Lista de Espera</a>
-</nav>
 
-<a href="waitlist_es.html"
-   class="btn btn-outline"
-   onclick="gtag('event','click_join_waitlist_es');">
-  Entrar ahora
-</a>
+    <!-- BOTÓN HAMBURGUESA -->
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
+    <nav class="nav">
+      <a href="index_es.html" onclick="gtag('event','nav_home_es');">Inicio</a>
+      <a href="ia_es.html" onclick="gtag('event','nav_ai_es');">IA</a>
+      <a href="ocr_es.html" onclick="gtag('event','nav_ocr_es');">OCR</a>
+      <a href="portfolio_es.html" onclick="gtag('event','nav_portfolio_es');">Portafolio</a>
+      <a href="waitlist_es.html" onclick="gtag('event','nav_waitlist_es');">Lista de Espera</a>
+    </nav>
+
+    <a href="waitlist_es.html"
+      class="btn btn-outline"
+      onclick="gtag('event','click_join_waitlist_es');">
+      Entrar ahora
+    </a>
+
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
+
     <div class="hero-text">
       <p class="badge">Pre-lanzamiento Oficial</p>
 
@@ -71,13 +97,16 @@
         <li>Descuento grande en el plan Pro.</li>
         <li>Cupos limitados en la fase inicial.</li>
       </ul>
+
       <p class="hero-card-footer">
         Lanzamiento oficial: <strong>Primer trimestre de 2026</strong>
       </p>
     </div>
+
   </div>
 </section>
 
+<!-- FORM -->
 <section class="section section-alt">
   <div class="container two-col">
 
@@ -100,19 +129,21 @@
         frameborder="0"
         marginheight="0"
         marginwidth="0"
-        style="border:0;">
-      Cargando…
+        style="border:0; max-width:100%;">
+        Cargando…
       </iframe>
     </div>
 
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
     <p>BuildEasy by Biaggio • Organiza tu empresa y trabaja con más profesionalismo.</p>
   </div>
 </footer>
+
 <script>
   (function () {
     const topbar = document.querySelector('.topbar');
@@ -129,3 +160,4 @@
 
 </body>
 </html>
+
