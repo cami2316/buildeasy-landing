@@ -92,16 +92,26 @@
   <span></span>
   <span></span>
 </button>
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="ia.html">IA</a>
-      <a href="ocr.html">Recibos e Work Orders</a>
-      <a href="portfolio.html">Portfólio</a>
-      <a href="pricing.html">Planos</a>
-      <a href="waitlist.html">Lista de Espera</a>
-    </nav>
+   <nav class="nav">
+  <a href="index.html">Início</a>
 
-    <a href="waitlist.html" class="btn btn-outline">Lista de espera</a>
+  <a href="ia.html" onclick="gtag('event','click_ia');">IA</a>
+
+  <a href="ocr.html" onclick="gtag('event','click_ocr');">Recibos e Work Orders</a>
+
+  <a href="portfolio.html" onclick="gtag('event','click_portfolio');">Portfólio</a>
+
+  <a href="pricing.html" onclick="gtag('event','click_pricing');">Planos</a>
+
+  <a href="waitlist.html" onclick="gtag('event','click_waitlist');">
+    Lista de Espera
+  </a>
+</nav>
+
+<a href="waitlist.html" class="btn btn-outline" onclick="gtag('event','click_waitlist');">
+  Lista de Espera
+</a>
+
   </div>
 </header>
 
