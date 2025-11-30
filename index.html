@@ -438,18 +438,26 @@
       <p class="footer-small">Lançamento previsto: primeiro trimestre de 2026 • Entre na lista de espera e receba as novidades.</p>
     </div>
   </footer>
-<script>
-  (function () {
-    const topbar = document.querySelector('.topbar');
-    const toggle = document.querySelector('.nav-toggle');
+/* ======== FIXE REAL DO BOTÃO HAMBÚRGUER ======== */
 
-    if (!topbar || !toggle) return;
+.nav-toggle {
+  display: inline-flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;                        /* separa os riscos */
+  padding: 6px;
+  border: none;
+  background: transparent;
+}
 
-    toggle.addEventListener('click', function () {
-      const isOpen = topbar.classList.toggle('nav-open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  })();
-</script>
+.nav-toggle span {
+  width: 24px;
+  height: 3px;
+  background: var(--blue-dark);
+  border-radius: 999px;
+  display: block;
+}
+
 </body>
 </html>
