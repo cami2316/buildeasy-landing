@@ -1,4 +1,4 @@
-:root {
+::root {
   --blue-dark: #0D274D;
   --blue-medium: #5E7FA3;
   --blue-light: #AFC3D6;
@@ -9,6 +9,7 @@
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* RESET */
 *,
 *::before,
 *::after {
@@ -17,12 +18,15 @@
 
 body {
   margin: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text-main);
   background: #ffffff;
 }
 
-/* Layout helpers */
+/* ===================== LAYOUT HELPERS ===================== */
+
 .container {
   width: 100%;
   max-width: 1120px;
@@ -54,12 +58,14 @@ body {
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 32px;
 }
+
+
 /* ===================== TOPBAR ===================== */
 
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(13, 39, 77, 0.08);
@@ -73,8 +79,7 @@ body {
   gap: 16px;
 }
 
-/* ===================== LOGO ===================== */
-
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -114,7 +119,7 @@ body {
 
 .nav-toggle span {
   display: block;
-  width: 20px;
+  width: 22px;
   height: 2px;
   margin: 4px 0;
   background: var(--blue-dark);
@@ -137,37 +142,36 @@ body {
 
 @media (max-width: 768px) {
 
-  .topbar-inner {
-    gap: 10px;
-    align-items: center;
-  }
-
-  /* mostra o hambúrguer */
   .nav-toggle {
     display: inline-flex;
     margin-left: auto;
   }
 
-  /* esconde nav padrão */
   .nav {
     display: none;
     flex-direction: column;
     gap: 12px;
-    padding: 12px 0 16px;
+    padding: 12px 20px 16px;
     background: #ffffff;
     border-bottom: 1px solid rgba(13, 39, 77, 0.12);
+    z-index: 999;
   }
 
-  /* quando abrir */
   .topbar.nav-open .nav {
     display: flex;
   }
+
+  .topbar-inner {
+    gap: 10px;
+    align-items: center;
+  }
 }
 
-/* ===================== Hero ===================== */
+
+/* ===================== HERO ===================== */
 
 .hero {
-  padding: 72px 0 56px;
+  padding: 48px 0 56px; /* reduzido p/ não colar no topo */
   background: radial-gradient(circle at top left, var(--blue-light) 0, #ffffff 55%);
 }
 
@@ -229,7 +233,7 @@ body {
 .hero-card {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 20px 20px 18px;
+  padding: 20px;
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(13, 39, 77, 0.06);
 }
@@ -243,7 +247,6 @@ body {
 .hero-card ul {
   padding-left: 18px;
   font-size: 0.9rem;
-  color: var(--text-main);
 }
 
 .hero-card-footer {
@@ -252,7 +255,9 @@ body {
   color: var(--text-muted);
 }
 
-/* Pills */
+
+/* ===================== OUTRAS SEÇÕES ===================== */
+
 .pill-grid {
   display: flex;
   flex-wrap: wrap;
@@ -267,7 +272,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* Checklist */
 .checklist {
   list-style: none;
   padding-left: 0;
@@ -279,7 +283,6 @@ body {
   font-size: 0.92rem;
 }
 
-/* Features */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -289,18 +292,11 @@ body {
 .feature-card {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 18px 18px 16px;
+  padding: 18px;
   border: 1px solid rgba(13, 39, 77, 0.06);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
 }
 
-.feature-card h3 {
-  margin-top: 0;
-  font-size: 1rem;
-  margin-bottom: 6px;
-}
-
-/* Steps */
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -310,7 +306,7 @@ body {
 .step {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 16px 16px 14px;
+  padding: 16px;
   border: 1px dashed rgba(13, 39, 77, 0.18);
 }
 
@@ -327,7 +323,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Plans */
 .plans {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -338,17 +333,13 @@ body {
 .plan-card {
   border-radius: var(--radius-lg);
   border: 1px solid rgba(13, 39, 77, 0.12);
-  padding: 18px 18px 16px;
+  padding: 18px;
   background: #ffffff;
 }
 
 .plan-card-highlight {
   border: 2px solid var(--blue-dark);
   box-shadow: var(--shadow-soft);
-}
-
-.plan-card h3 {
-  margin-top: 0;
 }
 
 .price {
@@ -363,17 +354,11 @@ body {
   margin-bottom: 10px;
 }
 
-.plan-card ul {
-  padding-left: 18px;
-  font-size: 0.9rem;
-}
-
 .plan-note {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
 
-/* Pricing comparison */
 .pricing-table {
   overflow-x: auto;
   margin-top: 24px;
